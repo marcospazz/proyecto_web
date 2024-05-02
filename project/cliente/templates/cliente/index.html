@@ -1,0 +1,22 @@
+{% extends 'core/base.html' %}
+
+{% block titulo %}
+    <h1>Clientes</h1>
+{% endblock titulo %}
+
+{% block contenido %}
+<div class="row row-cols-1 row-cols-md-2">
+    {% for cliente in clientes %}
+    <div class="col mb-3">
+        <div class="card">
+            <div class="card-body">
+                
+                <h2 class="card-title">{{ cliente.nombre  }} Correo:{{ cliente.correo }}</h2>
+                <p class="card-text text-muted">Teléfono: {{ cliente.contacto_telefonico }}</p>
+            
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock contenido %}

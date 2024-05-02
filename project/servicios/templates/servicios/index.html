@@ -1,0 +1,22 @@
+{% extends 'core/base.html' %}
+
+{% block titulo %}
+    <h1>Servicios</h1> 
+    <a href="{% url 'servicios:servicios_create' %}">Crear</a>
+{% endblock titulo %}
+
+{% block contenido %}
+<div class="row row-cols-1 row-cols-md-2">
+    {% for servicio in servicios %}
+    <div class="col mb-3">
+        <div class="card">
+            <div class="card-body">
+                
+                <h2 class="card-title">{{ servicio.nombre  }}
+                            
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock contenido %}
