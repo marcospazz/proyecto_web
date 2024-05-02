@@ -4,4 +4,4 @@ from django.contrib import admin
 
 from . import models
 
-admin.site.register(models.Servicios)
+admin.site.register(models.Eventos)

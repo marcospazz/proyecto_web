@@ -1,0 +1,56 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block titulo %}
+    
+
+{% endblock titulo %}
+
+{% block contenido %}
+    <!-- Heading Row-->
+    <div class="row gx-4 gx-lg-5 align-items-center my-5">
+        <div class="col-lg-7"><img class="img-fluid rounded mb-4 mb-lg-0" src="{% static 'core/img/intro.jpg' %}" alt="..." /></div>
+        <div class="col-lg-5">
+            <div style="color: white;">
+            <h1 class="font-weight-light">Sobre nosotros...</h1>
+            <p>Nuestro equipo está dedicado a crear momentos inolvidables a través de la comida, comprometiéndonos a utilizar ingredientes frescos y de la más alta calidad. Nos esforzamos por cumplir con las expectativas de nuestros clientes, superando incluso las más exigentes, mientras mantenemos un compromiso constante con la sostenibilidad y la responsabilidad social.
+
+                Puede confiar en que su evento, reunión o celebración estará en manos de profesionales comprometidos que se esfuerzan por ofrecer un servicio excepcional en cada ocasión.
+                
+                Esperamos tener la oportunidad de colaborar con usted y crear momentos memorables.</p>
+        </div>
+            <a class="btn btn-primary" href="https://wa.me/542619999999" target="_blank">WhatsApp</a>
+        </div>
+    </div>
+    <!-- Call to Action-->
+    <div class="card text-white bg-secondary my-5 py-4 text-center">
+        <div class="card-body"><p class="text-white m-0">Aqui te dejamos algunos de nuestos servicios</p></div>
+    </div>
+    <!-- Content Row-->
+    <div class="row gx-4 gx-lg-5">
+        <div class="col-md-4 mb-5">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h2 class="card-title">Tablas gourmet</h2>
+                    <p class="card-text">Disfruta de una experiencia gourmet con nuestras tablas de fiambres y panes. Saborea una selección exquisita de embutidos artesanales, quesos premium y panes frescos, perfectos para cualquier ocasión. Desde reuniones íntimas hasta eventos especiales, nuestras tablas añaden un toque de sofisticación a tus celebraciones. Deléitate con la frescura y el sabor de nuestros productos</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-5">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h2 class="card-title">Brochetas con papas noisets</h2>
+                    <p class="card-text">Descubre la delicia de nuestras brochetas y papas noisettes. Desde brochetas de carne marinada hasta opciones vegetarianas, cada bocado es una explosión de sabor. Acompañadas de crujientes papas noisettes. Una combinación irresistible que satisfará a todos los paladares."</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-5">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h2 class="card-title">Show de pizzas</h2>
+                    <p class="card-text">Deléitate con nuestras pizzas artesanales, preparadas con ingredientes frescos y masa crujiente. Desde clásicas margaritas hasta combinaciones gourmet, cada pizza es una experiencia culinaria única. Perfectas para reuniones, fiestas o eventos, nuestras pizzas satisfacen todos los antojos con su sabor auténtico y delicioso.</p>
+                </div>                
+            </div>
+        </div>
+    </div>
+{% endblock contenido %}
