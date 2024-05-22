@@ -1,0 +1,19 @@
+{% extends 'core/base.html' %}
+
+{% block titulo %}
+    Eliminar agenda de evento
+{% endblock titulo %}
+
+{% block contenido %}
+    
+    <p class="fs-5 fst-italic">Esta a punto de eliminar este evento de la agenda. ¿Desea continuar?</p>
+
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-danger">Confirmar</button>
+    </form>
+    <div class="fs-3 pb-4">
+        <a href="{% url 'eventos:home' %}">Volver al inicio de Producto</a>
+    </div>
+
+{% endblock contenido %}

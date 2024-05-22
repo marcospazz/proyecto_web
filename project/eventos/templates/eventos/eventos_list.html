@@ -1,0 +1,31 @@
+{% extends 'core/base.html' %}
+{% block titulo %}
+    Listado de eventos
+{% endblock titulo %}
+{% block contenido %}
+    <div class="py-lg-4 ">
+        <form action="{% url 'eventos:eventos_list' %}" method="get">
+            <input type="date" name="consulta">
+            <button type="submit">Buscar</button>
+        </form>
+    </div>
+    <ul>
+        {% for evento in object_list %}
+                    <tr>
+                        <td>{{ evento.fecha_evento }}</td>
+                        <td>
+                            <a class="btn btn-info btn-sm me-1"
+                               href="{% url 'eventos:eventos_detail' evento.id %}">Detalle</a>
+                            <a class="btn btn-warning btn-sm me-1"
+                               href="{% url 'eventos:eventos_update' evento.id %}">Cambiar</a>
+                            <a class="btn btn-danger btn-sm"
+                               href="{% url 'eventos:eventos_delete' evento.id %}">Borrar</a>
+                        </td>
+                    </tr>
+        {% endfor %}
+        
+    </ul>
+    <div class="fs-3 pb-4">
+        <a href="{% url 'eventos:home' %}">Volver</a>
+    </div>
+{% endblock contenido %}

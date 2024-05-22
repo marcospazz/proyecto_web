@@ -1,23 +1,14 @@
 {% extends 'core/base.html' %}
 
 {% block titulo %}
-    <h1>Eventos a realizar</h1>
+    <h1>Eventos</h1>
 {% endblock titulo %}
 
 {% block contenido %}
 <div class="row row-cols-1 row-cols-md-2">
-    
-    {% for evento in eventos %}
-    <div class="col mb-3">
-        <div class="card">
-            <div class="card-body">
-                {{ evento }} 
-                
-             
-            </div>
-        </div>
-    </div>
-    {% endfor %}
+  <a href="{% url 'eventos:eventos_form' %}">Agendar nuevo evento</a>
+  <a href="{% url 'eventos:eventos_list' %}">Ver agenda</a>  
+  
 </div>
 
 {% endblock contenido %}

@@ -1,0 +1,16 @@
+{% extends 'core/base.html' %}
+{% block titulo %}
+    Detalle evento
+{% endblock titulo %}
+
+{% block contenido %}
+
+    <ul>
+        <li>{{ object }}</li>
+    </ul>
+
+    <div class="fs-3 pb-4">
+        <a href="{% url 'eventos:eventos_list' %}">Volver</a>
+    </div>
+
+{% endblock contenido %}
