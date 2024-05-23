@@ -11,7 +11,7 @@ def home(request):
 
 def servicios_create(request):
     if request.method == "POST":
-        form = forms.ServiciosForm(request.POST)
+        form = forms.ServiciosForm(request.POST, request.FILES)
         if form.is_valid:
             form.save()
             return redirect("servicios:home")

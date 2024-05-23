@@ -1,22 +1,38 @@
 {% extends 'core/base.html' %}
 
 {% block titulo %}
-    <h1>Servicios</h1> 
-    <a href="{% url 'servicios:servicios_create' %}">Crear</a>
+    <h1 class="mb-4">Servicios</h1>
 {% endblock titulo %}
 
 {% block contenido %}
-<div class="row row-cols-1 row-cols-md-2">
-    {% for servicio in servicios %}
-    <div class="col mb-3">
-        <div class="card">
-            <div class="card-body">
-                
-                <h2 class="card-title">{{ servicio.nombre  }}
-                            
-            </div>
+    {% if user.is_authenticated %}
+        <div class="text-center mb-4" style="position: relative; z-index: 10;">
+            <a href="{% url 'servicios:servicios_create' %}" class="btn btn-primary">Crear nuevo servicio</a>
         </div>
-    </div>
-    {% endfor %}
+    {% endif %}
+<div class="container">
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+        {% for servicio in servicios %}
+            <div class="col mb-4">
+                <div class="card shadow-sm h-100 text-center">
+                    <div class="card-body">
+                        <h2 class="card-title mb-3">{{ servicio.nombre }}</h2>
+                        <div class="d-flex justify-content-center mb-3">
+                            {% if servicio.avatar %}
+                                <img src="{{ servicio.avatar.url }}" class="img-fluid rounded">
+                            {% else %}
+                                <p class="mt-3">No hay imagen disponible para este servicio.</p>
+                            {% endif %}
+                        </div>
+                        {% if servicio.descripcion %}
+                            <p class="card-text">Descripción: {{ servicio.descripcion }}</p>
+                        {% endif %} 
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>    
 </div>
 {% endblock contenido %}
+
+
