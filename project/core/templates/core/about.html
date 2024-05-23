@@ -1,0 +1,22 @@
+{% extends 'core/base.html' %}
+
+{% block titulo %}
+<div style = "text-align: center;">
+    <h1>Sobre mi.</h1>
+</div>
+{% endblock titulo %}
+
+{% block contenido %}
+    <div style="background-color: white; padding: 20px; border-radius: 10px; margin-top: 50px;">
+        <p>Mi nombre es Marcos Paz. Aunque tengo experiencia en programación en C# y bases de datos SQL, ha pasado algún tiempo desde que trabajé en esos campos. Decidí cursar Python para actualizarme y adaptarme a las tecnologías más actuales, con la esperanza de encontrar oportunidades laborales que me permitan seguir mi pasión.</p>
+
+        <p>Actualmente estoy trabajando en este proyecto final, que está en proceso de desarrollo. La idea principal es crear una plataforma donde los clientes puedan encontrar y contratar servicios gastronómicos para sus eventos o reuniones. Además de ofrecer información detallada sobre los servicios, también queremos facilitar el contacto a través de WhatsApp.</p>
+
+        <p>Esta página no solo será beneficiosa para los clientes, sino también para los proveedores de servicios gastronómicos. Les permitirá gestionar una agenda con los futuros servicios a ofrecer, así como mantener un registro de los clientes y sus detalles de contacto. También podrán compartir fotos y detalles de sus servicios.</p>
+
+        <p>Nuestro objetivo a largo plazo es mejorar continuamente la funcionalidad de la página para hacerla más útil y eficiente para todos los usuarios.</p>
+    </div>
+    <div style = "text-align: right;">
+    <a class= "btn btn-primary "href="{% url 'core:home' %}">Ir a inicio</a>
+    </div>
+{% endblock contenido %}
