@@ -5,7 +5,7 @@
 {% endblock titulo %}
 
 {% block contenido %}
-    
+<div style="background-color: white; padding: 20px; border-radius: 10px; margin-top: 50px; text-align: center;">    
     <p class="fs-5 fst-italic">Esta a punto de eliminar este evento de la agenda. ¿Desea continuar?</p>
 
     <form method="post">
@@ -13,7 +13,7 @@
         <button type="submit" class="btn btn-danger">Confirmar</button>
     </form>
     <div class="fs-3 pb-4">
-        <a href="{% url 'eventos:eventos_list' %}">Volver al listado</a>
+        <a class = "btn btn-primary"href="{% url 'eventos:eventos_list' %}">Volver al listado</a>
     </div>
-
+</div>
 {% endblock contenido %}

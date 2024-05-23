@@ -5,16 +5,18 @@
 {% endblock titulo %}
 
 {% block contenido %}
-    
+<div style="background-color: white; padding: 20px; border-radius: 10px; margin-top: 50px;">
     <form method="post">
         {% csrf_token %}
         <table>
             {{ form.as_table }}
         </table>
-        <button type="submit" class="btn btn-primary">Guardar</button>
+        <div style="text-align: center;">
+            <button type="submit" class="btn btn-primary">Guardar</button>
+        </div>
     </form>
     <div class="fs-3 pb-4">
-        <a href="{% url 'eventos:eventos_list' %}">Volver</a>
+        <a style="float: right;" class="btn btn-primary" href="{% url 'eventos:eventos_list' %}">Volver</a>
     </div>
-
+</div>
 {% endblock contenido %}

@@ -5,11 +5,13 @@
 {% endblock titulo %}
 
 {% block contenido %}
-    <form method="post">
-        {% csrf_token %}
-     <table>
-           {{ form.as_table }}
-     </table>
-        <button type="submit" class="btn btn-primary">Guardar</button>
-    </form>
+<form method="post" style="background-color: white; padding: 20px; border-radius: 10px; margin-top: 50px;">
+    {% csrf_token %}
+    <table style="margin: 0 auto;">
+        {{ form.as_table }}
+    </table>
+    <div style="text-align: center;">
+    <button type="submit" style="margin-top: 10px;" class="btn btn-primary">Guardar</button>
+    </div>
+</form>
 {% endblock contenido %}
