@@ -4,13 +4,33 @@
 {% endblock titulo %}
 
 {% block contenido %}
-
-    <ul>
-        <li>{{ object }}</li>
-    </ul>
-
-    <div class="fs-3 pb-4">
-        <a href="{% url 'eventos:eventos_list' %}">Volver</a>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <div class="row">
+                        <div class="col-md-12">
+                            Fecha evento: {{ object.fecha_evento }}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            Servicio: {{ object.servicio.nombre }}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            Cliente: {{ object.cliente }}
+                        </div>
+                    </div>
+                    <!-- Agrega más campos si es necesario -->
+                </li>
+            </ul>
+            <div class="text-center mt-4">
+                <a href="{% url 'eventos:eventos_list' %}" class="btn btn-primary btn-lg">Volver</a>
+            </div>
+        </div>
     </div>
-
+</div>
 {% endblock contenido %}
