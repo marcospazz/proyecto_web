@@ -35,4 +35,8 @@ Django
 
 Pillow
 
+# Link a video utilizando la pagina
+
+https://youtu.be/8XPq9qXbGKY
+
 # 
